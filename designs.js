@@ -48,7 +48,8 @@ PIXEL_CANVAS.on( 'click', 'td', function( event ) {
     event.preventDefault();
 
     let activeGridCell = $( this );
-    changeGridBackgroundColor( activeGridCell, COLOR_PICKER.value );
+    
+    activeGridCell.css( 'background-color' ) === 'rgb(255, 255, 255)' ? changeGridBackgroundColor( activeGridCell, COLOR_PICKER.value ) : changeGridBackgroundColor( activeGridCell, 'white' );
 });
 
 /**
